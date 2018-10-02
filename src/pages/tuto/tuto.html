@@ -1,0 +1,58 @@
+<!--
+  Generated template for the TutoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tutoriel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager>
+
+    <ion-slide>
+      <img class="center" src='assets/imgs/home.jpg' alt="Home"/>
+      <h2>Bonjour</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="center" src='assets/imgs/ecole.png' alt="Ecole"/>
+      <h2>Sur cette application, une fois connecté, vous pourrez consulter les informations, articles, dates, et galeries photos d'une ecole primaire.</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="center" src='assets/imgs/articles.png' alt="Acticles"/>
+      <h2>L'onglet Artcicles permet de consulter les artcicles ainsi que les sauvegarder en Favoris pour ensuite les retrouver sur la page d'Acceuil.</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="center" src='assets/imgs/gal.png' alt="Galleries"/>
+      <h2>L'onglet Galleries permet de consulter les galeries composées de photos en rapport avec l'Ecole</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="center" src='assets/imgs/date.png' alt="Dates"/>
+      <h2>L'onglet Dates permet de consulter les Dates importantes liées à l'école et de les ajouter dans votre agenda</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="center" src='assets/imgs/info.png' alt="Infos"/>
+      <h2>L'onglet Info permet de consulter les informations de l'école et de les ajouter dans votre carnet d'adresses</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <button class="button" ion-button (click)=closeTuto()>Fermer le Tutoriel</button>
+      <ion-item>
+        <ion-label>Ne plus afficher</ion-label>
+        <ion-checkbox [(ngModel)]="neplusaff"></ion-checkbox>
+      </ion-item>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

@@ -6,9 +6,11 @@
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
+    "lab": "ionic lab",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "ionic": "ionic-app-scripts serve --address 0.0.0.0 --port 8101 --livereload-port 35730 --dev-logger-port 53704 --nobrowser"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -21,10 +23,20 @@
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
     "@ionic-native/core": "~4.12.0",
+    "@ionic-native/http": "^4.15.0",
     "@ionic-native/splash-screen": "~4.12.0",
     "@ionic-native/status-bar": "~4.12.0",
     "@ionic/pro": "2.0.3",
     "@ionic/storage": "2.2.0",
+    "cordova-android": "7.1.1",
+    "cordova-plugin-advanced-http": "2.0.1",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-file": "6.0.1",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^2.1.4",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -36,5 +48,21 @@
     "@ionic/lab": "1.0.9",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-advanced-http": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }
