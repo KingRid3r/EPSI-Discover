@@ -3,11 +3,15 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { Diagnostic } from '@ionic-native/diagnostic';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TutorialPage } from '../pages/tuto/tuto';
+import { VRPage } from '../pages/vrpage/vrpage';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    TutorialPage
+    TutorialPage,
+    VRPage
   ],
   imports: [
     BrowserModule,
@@ -30,11 +35,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    TutorialPage
+    TutorialPage,
+    VRPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    AndroidPermissions,
+    Diagnostic,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
