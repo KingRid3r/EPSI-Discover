@@ -5,21 +5,35 @@
 <body style='margin : 0px; overflow: hidden;'>
 
 <a-scene embedded arjs>
-  <a-assets>
-    <a-asset-item id="makery" src="3DFiles/bat2/scene.gltf"></a-asset-item>
-  </a-assets>
-  <a-entity scale=" 1 1 1 " gltf-model="#makery"></a-entity>
-  <a-marker-camera preset='hiro'></a-marker-camera>
-</a-scene>
 
-<!--
-<a-scene embedded arjs>
-  <a-marker preset="hiro">
-    <a-box position="-1 0.5 0" rotation="0 45 0" color="#4CC3D9"></a-box>
-    <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+  <a-assets>
+    <a-asset-item id="bat2" src="3DFiles/bat2/scene.gltf"></a-asset-item>
+  </a-assets>
+
+  <a-assets>
+    <a-asset-item id="makery" src="3DFiles/bat1/scene.gltf"></a-asset-item>
+  </a-assets>
+
+  <a-marker preset='hiro'>
+    <a-entity scale=" 0.05 0.05 0.05 " gltf-model="#makery"></a-entity>
   </a-marker>
+
+  <a-marker type='pattern' patternUrl='3DFiles/marker.patt'>
+    <a-entity scale=" 1 1 1 " gltf-model="#bat2"></a-entity>
+  </a-marker>
+
   <a-entity camera></a-entity>
 </a-scene>
+<!--
+  <a-assets>
+    <a-asset-item id="makery" src="3DFiles/bat1/scene.gltf"></a-asset-item>
+  </a-assets>
+  <a-entity scale=" 0.05 0.05 0.05 " gltf-model="#makery"></a-entity>
+  <a-marker-camera preset='hiro'></a-marker-camera>
+
+
+<a-marker-camera type='pattern' patternUrl='3DFiles/marker.patt'></a-marker-camera>
+
 -->
 </body>
 </html>
