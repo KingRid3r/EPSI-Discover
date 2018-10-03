@@ -13,37 +13,29 @@
     </ion-refresher-content>
   </ion-refresher>
 
-  <div *ngIf="true">
     <ion-searchbar (ionInput)="getArts($event)"></ion-searchbar>
     <ion-card *ngFor="let art of items">
-      <div *ngIf="art.classe == 0 || art.classe == classe">
         <ion-card-header>
           <ion-item>
-            <ion-icon *ngIf="art.important == true" item-left name="alert"></ion-icon>
-            <h2 *ngIf="art.important == true" item-left>{{art.titre}}</h2>
-            <h2 *ngIf="art.important == false">{{art.titre}}</h2>
+            <h2>{{art.titre}}</h2>
           </ion-item>
-          <h4>{{art.categorie}} - {{art.gdate.toLocaleString('fr-FR', { timeZone: 'UTC' })}}</h4>
+          <h4>{{art.date}}</h4>
         </ion-card-header>
         <ion-card-content>
+          <!--
           <div *ngFor="let photo of art.photos">
             <img src='http://www.sebastien-thon.fr/cours/M4104Cip/projet/images/{{photo.image}}' alt="{{photo.legende}}"/>
             <h4 class="center">{{photo.legende}}</h4>
           </div>
+          -->
           <br/>
           <p>{{art.texte}}</p>
+          <!--
           <ion-item>
             <ion-label class="noSpace" item-left>Favori</ion-label>
-            <ion-toggle class="noSpace" [(ngModel)]="this.Fav[art.id]" (ionChange)="addFav(art.id, this.Fav[art.id])" item-left></ion-toggle>
+            <ion-toggle class="noSpace" [(ngModel)]="this.Fav[art.id_de]" (ionChange)="addFav(art.id_de, this.Fav[art.id_de])" item-left></ion-toggle>
           </ion-item>
+          -->
         </ion-card-content>
-      </div>
     </ion-card>
-  </div>
-
-  <div *ngIf="">
-    <img class="center noco" src='assets/imgs/not_co.png' alt="NOT_CONNECTED"/>
-    <h1>Veuiller vous connecter pour Accéder a cette page</h1>
-  </div>
-
 </ion-content>
