@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { VRPage } from '../pages/vrpage/vrpage';
 import { ActPage} from '../pages/act/act';
+import { FormaPage } from '../pages/forma/forma';
+import { ApprentPage } from '../pages/apprent/apprent';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +28,9 @@ export class MyApp {
       { title: 'Accueil', component: HomePage },
       { title: 'Articles', component: ListPage },
       { title: 'VR', component: VRPage },
-      { title: 'Activités', component: ActPage}
+      { title: 'Activités', component: ActPage},
+      { title: 'Formation', component: FormaPage},
+      { title: 'Apprentissage', component: ApprentPage}
     ];
 
   }
