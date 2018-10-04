@@ -25,8 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Accueil', component: HomePage },
       { title: 'Articles', component: ListPage },
-      { title: 'VR', component: VRPage },
-      { title: 'Activités', component: ActPage}
+      { title: 'Activités', component: ActPage},
+      { title: 'AR Viewer', component: VRPage }
     ];
 
   }
