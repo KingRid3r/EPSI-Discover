@@ -12,6 +12,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { TutorialPage } from '../pages/tuto/tuto';
 import { VRPage } from '../pages/vrpage/vrpage';
+import { Info } from '../pages/info/info';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     TutorialPage,
-    VRPage
+    VRPage,
+    Info
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     TutorialPage,
-    VRPage
+    VRPage,
+    Info
   ],
   providers: [
     StatusBar,

@@ -6,6 +6,7 @@ import { TutorialPage } from '../tuto/tuto';
 import { Platform } from "ionic-angular";
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { Diagnostic } from '@ionic-native/diagnostic';
+import { Info } from '../info/info';
 
 @Component({
   selector: 'page-home',
@@ -30,6 +31,10 @@ export class HomePage {
         modal.present();
       }
     });
+  }
+
+  onGoToAppareils() {
+    this.navCtrl.push(Info);
   }
 
 }

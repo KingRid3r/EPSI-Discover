@@ -21,6 +21,7 @@ export class ListPage {
           if(data.erreur){
             console.log(data.erreur);
 
+
             let toast = this.toastCtrl.create({
               message: data.erreur,
               duration: 3000,
