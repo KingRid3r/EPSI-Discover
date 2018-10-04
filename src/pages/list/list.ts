@@ -27,8 +27,6 @@ export class ListPage {
     });
   }
 
-
-
   rafraichir(refresher){
 
     refresher.complete();

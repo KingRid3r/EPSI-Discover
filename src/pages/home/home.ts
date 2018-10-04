@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { TutorialPage } from '../tuto/tuto';
+import { ActPage } from '../act/act';
 import { Platform } from "ionic-angular";
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { Diagnostic } from '@ionic-native/diagnostic';
@@ -30,6 +31,10 @@ export class HomePage {
         modal.present();
       }
     });
+  }
+
+  Test(){
+    this.navCtrl.setRoot(ActPage)
   }
 
 }
