@@ -28,8 +28,8 @@ export class ActPage {
       maxZoom: 10
     }).on('locationfound', (e) => {
       let markerGroup = leaflet.featureGroup();
-      let marker: any = leaflet.marker([48.862725, 2.287592000000018]).on('click', () => {
-        alert('Marker clicked');
+      let marker: any = leaflet.marker([e.latitude, e.longitude]).on('click', () => {
+        alert('Ecole EPSI');
       })
       markerGroup.addLayer(marker);
       this.map.addLayer(markerGroup);
