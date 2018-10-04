@@ -10,26 +10,27 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { TutorialPage } from '../pages/tuto/tuto';
 import { VRPage } from '../pages/vrpage/vrpage';
 import { ActPage } from '../pages/act/act';
 import { FormaPage } from '../pages/forma/forma';
 import { ApprentPage } from '../pages/apprent/apprent';
+import { CvPage} from "../pages/cv/cv";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FileChooser} from "@ionic-native/file-chooser";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     TutorialPage,
     VRPage,
     ActPage,
     FormaPage,
-    ApprentPage
+    ApprentPage,
+    CvPage
   ],
   imports: [
     BrowserModule,
@@ -41,12 +42,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     TutorialPage,
     VRPage,
     ActPage,
     FormaPage,
-    ApprentPage
+    ApprentPage,
+    CvPage
   ],
   providers: [
     StatusBar,
@@ -55,7 +56,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Diagnostic,
     Camera,
     HTTP,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FileChooser
   ]
 })
 export class AppModule {}

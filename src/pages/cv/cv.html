@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+  <ion-title>Déposer/Voir les CV</ion-title>
+</ion-header>
+
+
+<ion-content padding>
+<p>Veuillez remplir les champs ci-dessous pour envoyer votre CV:</p>
+  <br/>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nom</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+      <ion-item>
+        <ion-label floating>Prénom</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label floating>Adresse mail</ion-label>
+        <ion-input type="int"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+
+  </ion-item>
+  <p><button (click)="choosef()">Choisissez un fichier</button></p>
+  <br/><button ion-button (click)="presentToast()">Envoyer</button>
+
+</ion-content>
