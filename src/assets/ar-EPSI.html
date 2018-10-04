@@ -3,23 +3,22 @@
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-
-<a-scene embedded arjs>
+<a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false;'>
 
   <a-assets>
-    <a-asset-item id="bat2" src="3DFiles/bat2/scene.gltf"></a-asset-item>
+    <a-asset-item id="bat2" src="3DFiles/bat2/scene.glb"></a-asset-item>
   </a-assets>
 
   <a-assets>
-    <a-asset-item id="makery" src="3DFiles/bat1/scene.gltf"></a-asset-item>
+    <a-asset-item id="makery" src="3DFiles/bat1/scene.glb"></a-asset-item>
   </a-assets>
 
   <a-marker preset='hiro'>
     <a-entity scale=" 0.05 0.05 0.05 " gltf-model="#makery"></a-entity>
   </a-marker>
 
-  <a-marker type='pattern' patternUrl='3DFiles/marker.patt'>
-    <a-entity scale=" 1 1 1 " gltf-model="#bat2"></a-entity>
+  <a-marker preset='kanji' >
+    <a-entity scale=" 0.05 0.05 0.05 " gltf-model="#bat2"></a-entity>
   </a-marker>
 
   <a-entity camera></a-entity>
