@@ -16,6 +16,8 @@ import { TutorialPage } from '../pages/tuto/tuto';
 import { VRPage } from '../pages/vrpage/vrpage';
 import { ActPage } from '../pages/act/act';
 import { DownMarkPage } from '../pages/down-mark/down-mark';
+import { FormaPage } from '../pages/forma/forma';
+import { ApprentPage } from '../pages/apprent/apprent';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +30,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TutorialPage,
     VRPage,
     ActPage,
-    DownMarkPage
+    DownMarkPage,
+    FormaPage,
+    ApprentPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TutorialPage,
     VRPage,
     ActPage,
-    DownMarkPage
+    DownMarkPage,
+    FormaPage,
+    ApprentPage
   ],
   providers: [
     StatusBar,

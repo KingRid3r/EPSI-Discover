@@ -4,6 +4,8 @@ import { ModalController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { TutorialPage } from '../tuto/tuto';
 import { ActPage } from '../act/act';
+import { FormaPage } from '../forma/forma';
+import { ApprentPage } from '../apprent/apprent';
 import { Platform } from "ionic-angular";
 @Component({
   selector: 'page-home',
@@ -24,6 +26,14 @@ export class HomePage {
 
   Test(){
     this.navCtrl.setRoot(ActPage)
+  }
+
+  Form(){
+    this.navCtrl.setRoot(FormaPage)
+  }
+
+  Appren(){
+    this.navCtrl.setRoot(ApprentPage)
   }
 
 }
