@@ -9,5 +9,34 @@
 
 
 <ion-content padding>
+  <ion-refresher (ionRefresh)="rafraichir($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
 
+  <ion-searchbar (ionInput)="getArts($event)"></ion-searchbar>
+  <ion-card *ngFor="let art of items">
+    <ion-card-header>
+      <ion-item>
+        <h2>{{art.titre}}</h2>
+      </ion-item>
+      <h4>{{art.date}}</h4>
+    </ion-card-header>
+    <ion-card-content>
+      <!--
+      <div *ngFor="let photo of art.photos">
+        <img src='http://www.sebastien-thon.fr/cours/M4104Cip/projet/images/{{photo.image}}' alt="{{photo.legende}}"/>
+        <h4 class="center">{{photo.legende}}</h4>
+      </div>
+      -->
+      <br/>
+      <p>{{art.texte}}</p>
+      <!--
+      <ion-item>
+        <ion-label class="noSpace" item-left>Favori</ion-label>
+        <ion-toggle class="noSpace" [(ngModel)]="this.Fav[art.id_de]" (ionChange)="addFav(art.id_de, this.Fav[art.id_de])" item-left></ion-toggle>
+      </ion-item>
+      -->
+    </ion-card-content>
+  </ion-card>
 </ion-content>
